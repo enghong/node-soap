@@ -6,7 +6,7 @@ export class NTLMSecurity implements ISecurity {
   private defaults;
 
   constructor(defaults: any);
-  constructor(username: any, password?: string, domain?: string, workstation?: string) {
+  constructor(username: any, password?: string, domain?: string, workstation?: string, customAuthenticationType?: string) {
     if (typeof username === 'object') {
       this.defaults = username;
       this.defaults.ntlm = true;
@@ -17,6 +17,7 @@ export class NTLMSecurity implements ISecurity {
         password: password,
         domain: domain,
         workstation: workstation,
+        customAuthenticationType: customAuthenticationType,
       };
     }
   }

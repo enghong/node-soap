@@ -193,6 +193,7 @@ export class HttpClient implements IHttpClient {
         password: exoptions.password,
         workstation: exoptions.workstation || '',
         domain: exoptions.domain || '',
+        customAuthenticationType: exoptions.customAuthenticationType || "NTLM",
       });
       req = ntlmReq(options);
     } else {
